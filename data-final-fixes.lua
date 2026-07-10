@@ -19,39 +19,39 @@ for _, prototype_type in ipairs(prototype_types) do
   end
 end
 
--- Modernize the legacy underground-belt structure sprites for Factorio 2.1.
--- The original prototypes used a low-resolution sheet with an hr_version child.
--- Factorio 2.1 base prototypes use one explicit high-resolution sheet at scale 0.5,
--- plus side-loading and patch entries. Reuse the existing HR artwork directly.
-local empty_sprite = {
-  filename = "__core__/graphics/empty.png",
-  priority = "extra-high",
-  width = 1,
-  height = 1,
-}
-
+-- Factorio 2.1 no longer documents the legacy hr_version sprite child. Use the
+-- existing high-resolution four-direction sheets directly instead.
+--
+-- The original low- and high-resolution definitions also used different shifts
+-- ({0.25, 0} versus {0.15625, 0.0703125}), even though the artwork is already
+-- centred inside each frame. Those offsets move the structure away from the
+-- entity origin and produce the visible misalignment. Keep the original valid
+-- Sprite4Way layout, explicitly declare its four frames, and remove the shifts.
 for _, prototype in pairs(data.raw["underground-belt"] or {}) do
   if is_ultimate_belts_prototype(prototype) and prototype.structure then
-    local direction_in = prototype.structure.direction_in
-    local direction_out = prototype.structure.direction_out
-    local in_sheet = direction_in and direction_in.sheet
-    local out_sheet = direction_out and direction_out.sheet
+    for _, direction_name in ipairs({"direction_in", "direction_out"}) do
+      local direction = prototype.structure[direction_name]
+      local legacy_sheet = direction and direction.sheet
 
-    if in_sheet and in_sheet.hr_version and out_sheet and out_sheet.hr_version then
-      local modern_in = table.deepcopy(in_sheet.hr_version)
-      local modern_out = table.deepcopy(out_sheet.hr_version)
+      if legacy_sheet then
+        local sheet = legacy_sheet.hr_version
+          and table.deepcopy(legacy_sheet.hr_version)
+          or table.deepcopy(legacy_sheet)
 
-      modern_in.hr_version = nil
-      modern_out.hr_version = nil
-      modern_in.scale = modern_in.scale or 0.5
-      modern_out.scale = modern_out.scale or 0.5
+        sheet.hr_version = nil
+        sheet.shift = nil
+        sheet.frames = 4
+        sheet.scale = sheet.scale or 0.5
 
-      prototype.structure.direction_in = {sheet = modern_in}
-      prototype.structure.direction_out = {sheet = modern_out}
-      prototype.structure.direction_in_side_loading = {sheet = table.deepcopy(modern_in)}
-      prototype.structure.direction_out_side_loading = {sheet = table.deepcopy(modern_out)}
-      prototype.structure.back_patch = {sheet = table.deepcopy(empty_sprite)}
-      prototype.structure.front_patch = {sheet = table.deepcopy(empty_sprite)}
+        prototype.structure[direction_name] = {sheet = sheet}
+      end
     end
+
+    -- These entries are optional in Factorio 2.1. Do not fabricate side-loading
+    -- or patch artwork from an incompatible legacy frame.
+    prototype.structure.direction_in_side_loading = nil
+    prototype.structure.direction_out_side_loading = nil
+    prototype.structure.back_patch = nil
+    prototype.structure.front_patch = nil
   end
 end
