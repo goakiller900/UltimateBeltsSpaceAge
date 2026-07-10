@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.4.0
+Date: 2026-07-11
+  Changes:
+    - Updated mod metadata for Factorio 2.1.
+    - Added optional Space Age dependency ordering.
+    - Preserved the complete five-tier belt, underground-belt, and splitter progression.
+  Compatibility:
+    - Removed obsolete mining hardness fields from entity prototypes.
+    - Stopped overwriting the vanilla logistics-3 science-pack ingredients.
+    - Added support for both loader and loader-1x1 prototype types in Deadlock integration.
+    - Added nil checks around optional Deadlock beltbox and loader upgrade chains.
+  Info:
+    - Updated project documentation and repository metadata.
