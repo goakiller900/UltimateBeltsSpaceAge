@@ -1,11 +1,14 @@
 {
-    "name": "UltimateBeltsSpaceAge",
-    "version": "1.2.0",
-    "title": "Ultimate Belts Space Age",
-    "author": "Jabor047",
-    "contact": "",
-    "homepage": "",
-    "factorio_version": "2.0",
-    "dependencies": ["base >= 2.0"],
-    "description": "Enables an additional five tiers of belts to the game, beyond what is currently available from other mods. The fastest belt in this mod is equivalent to 6 express belts. Based of Tyarns' UltimateBelts mod"
+  "name": "UltimateBeltsSpaceAge",
+  "version": "1.4.0",
+  "title": "Ultimate Belts Space Age",
+  "author": "Jabor047, goakiller900",
+  "contact": "",
+  "homepage": "https://github.com/goakiller900/UltimateBeltsSpaceAge",
+  "factorio_version": "2.1",
+  "dependencies": [
+    "base >= 2.1",
+    "? space-age >= 2.1"
+  ],
+  "description": "Adds five transport-belt tiers beyond express belts. The fastest tier runs at six times express-belt speed. Updated for Factorio 2.1 and Space Age; based on Tyarns' UltimateBelts mod."
 }
