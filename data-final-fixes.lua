@@ -13,32 +13,45 @@ end
 
 for _, prototype_type in ipairs(prototype_types) do
   for _, prototype in pairs(data.raw[prototype_type] or {}) do
-    if is_ultimate_belts_prototype(prototype) then
-      if prototype.minable then
-        prototype.minable.hardness = nil
-      end
+    if is_ultimate_belts_prototype(prototype) and prototype.minable then
+      prototype.minable.hardness = nil
     end
   end
 end
 
--- The custom underground-belt textures contain four directional frames on each
--- row. Factorio 2.1 needs that layout declared explicitly; otherwise it rotates
--- a single off-centre frame, causing the structures to appear displaced.
+-- Modernize the legacy underground-belt structure sprites for Factorio 2.1.
+-- The original prototypes used a low-resolution sheet with an hr_version child.
+-- Factorio 2.1 base prototypes use one explicit high-resolution sheet at scale 0.5,
+-- plus side-loading and patch entries. Reuse the existing HR artwork directly.
+local empty_sprite = {
+  filename = "__core__/graphics/empty.png",
+  priority = "extra-high",
+  width = 1,
+  height = 1,
+}
+
 for _, prototype in pairs(data.raw["underground-belt"] or {}) do
   if is_ultimate_belts_prototype(prototype) and prototype.structure then
-    for _, direction_name in ipairs({"direction_in", "direction_out"}) do
-      local direction = prototype.structure[direction_name]
-      local sheet = direction and direction.sheet
+    local direction_in = prototype.structure.direction_in
+    local direction_out = prototype.structure.direction_out
+    local in_sheet = direction_in and direction_in.sheet
+    local out_sheet = direction_out and direction_out.sheet
 
-      if sheet then
-        sheet.direction_count = 4
-        sheet.line_length = 4
+    if in_sheet and in_sheet.hr_version and out_sheet and out_sheet.hr_version then
+      local modern_in = table.deepcopy(in_sheet.hr_version)
+      local modern_out = table.deepcopy(out_sheet.hr_version)
 
-        if sheet.hr_version then
-          sheet.hr_version.direction_count = 4
-          sheet.hr_version.line_length = 4
-        end
-      end
+      modern_in.hr_version = nil
+      modern_out.hr_version = nil
+      modern_in.scale = modern_in.scale or 0.5
+      modern_out.scale = modern_out.scale or 0.5
+
+      prototype.structure.direction_in = {sheet = modern_in}
+      prototype.structure.direction_out = {sheet = modern_out}
+      prototype.structure.direction_in_side_loading = {sheet = table.deepcopy(modern_in)}
+      prototype.structure.direction_out_side_loading = {sheet = table.deepcopy(modern_out)}
+      prototype.structure.back_patch = {sheet = table.deepcopy(empty_sprite)}
+      prototype.structure.front_patch = {sheet = table.deepcopy(empty_sprite)}
     end
   end
 end
