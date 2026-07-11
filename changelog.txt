@@ -1,14 +1,19 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 2026-07-11
+  Release Notes:
+    - First public release of Ultimate Belts Space Age under the unique Factorio Mod Portal identifier UltimateBeltsSpaceAge.
+    - Version numbering starts at 0.0.1 because this is a new community-maintained continuation with its own Mod Portal identity and release history.
+    - The 0.0.1 version does not mean the project was created from scratch. It marks the first release under this continuation's new name and identity.
+    - Earlier UltimateBelts versions belong to the original mod and previous forks. Starting a separate version history avoids implying that this is an official replacement or direct continuation of those releases.
   Major Features:
-    - First public release of Ultimate Belts Space Age.
     - Adds five transport-belt tiers beyond express belts, including matching underground belts and splitters.
     - The fastest tier runs at six times express-belt speed.
+    - Preserves the established recipes, progression, entity names and gameplay of the earlier UltimateBelts codebase as closely as practical.
   Compatibility:
     - Updated for Factorio 2.1.
     - Supports Space Age as an optional dependency.
-    - Preserves optional Deadlock stacking beltbox and compact loader integration when its API is available.
+    - Preserves optional Deadlock's Stacking Beltboxes and Compact Loaders integration when its API is available.
     - Removed obsolete mining hardness fields from entity prototypes.
     - Stopped overwriting the vanilla logistics-3 science-pack ingredients.
     - Supports both loader and loader-1x1 prototypes in the optional Deadlock integration.
@@ -16,6 +21,13 @@ Date: 2026-07-11
   Known Issues:
     - Custom underground-belt entrance and exit graphics remain visibly misaligned in Factorio 2.1.
       The entities still place, connect, transport items, rotate, mine and upgrade normally.
-  Info:
-    - Community-maintained continuation based on Tyarns' UltimateBelts mod and later maintenance by Jabor047 and contributors.
+    - The graphics issue is inherited from the legacy artwork and is not considered a functional blocker for this release.
+  Credits:
+    - UltimateBelts was originally created by Tyarns.
+    - Later maintenance and compatibility work was carried out by Jabor047 and other contributors.
+    - This Factorio 2.1 and Space Age continuation is maintained by goakiller900.
+    - Thanks to Deadlock989 and the contributors and maintainers of Deadlock's Stacking Beltboxes and Compact Loaders for the optional integration API.
+    - Thanks to everyone who reported issues, tested builds, contributed fixes or preserved the project through earlier Factorio versions.
+  License:
+    - Distributed under the MIT License retained from the original project.
 ---------------------------------------------------------------------------------------------------
