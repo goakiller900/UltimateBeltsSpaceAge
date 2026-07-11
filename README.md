@@ -20,16 +20,37 @@ The mod adds five transport-belt tiers beyond express belts, including matching 
 
 ## Known issue / help wanted
 
-The custom underground-belt entrance and exit graphics use legacy artwork and are visibly misaligned in Factorio 2.1. The entities themselves still place, connect, transport items, rotate, mine, and upgrade normally.
+The custom underground-belt entrance and exit graphics use legacy artwork and are visibly misaligned in Factorio 2.1. The entities themselves still place, connect, transport items, rotate, mine and upgrade normally.
 
-Several Lua-only alignment and structure-layout fixes were tested without success and have been reverted. A proper fix likely requires rebuilding the underground-belt structure artwork for Factorio 2.1, including current-size directional and side-loading sprites plus front/back patches.
+Several Lua-only alignment and structure-layout fixes were tested without success and were reverted. A proper fix likely requires rebuilding the underground-belt structure artwork for Factorio 2.1, including current-size directional and side-loading sprites plus front and back patches.
 
-Contributions from someone experienced with Factorio entity graphics, GIMP/XCF source files, or underground-belt sprite layouts are welcome.
+Contributions from someone experienced with Factorio entity graphics, GIMP/XCF source files or underground-belt sprite layouts are welcome.
+
+## Building a release
+
+```bash
+python scripts/build_release.py
+```
+
+This validates `info.json`, the changelog, required files and root Lua module references. It then creates a deterministic Factorio-ready ZIP and SHA-256 checksum in `dist/`.
+
+## Automated releases
+
+- Pull requests validate the mod and upload a temporary workflow artifact.
+- Pushes to non-`master` branches create or replace a GitHub prerelease for that branch.
+- Pushes to `master` create an immutable stable GitHub release for the version in `info.json`.
+- Factorio Mod Portal publishing is restricted to `master` and requires the `FACTORIO_API_KEY` repository secret.
+
+The Mod Portal identifier is `UltimateBeltsSpaceAge`; the visible mod title is **Ultimate Belts Space Age**.
 
 ## Maintenance status
 
-This fork updates and maintains the original mod for newer Factorio releases. Gameplay, names, graphics, recipes, and progression are kept as close to the existing release as practical.
+This fork updates and maintains the original mod for newer Factorio releases. Gameplay, names, graphics, recipes and progression are kept as close to the existing release as practical.
 
 ## Credits
 
 Originally based on Tyarns' UltimateBelts mod. Previous maintenance by Jabor047 and contributors.
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
