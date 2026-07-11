@@ -4,10 +4,9 @@ require("prototypes.items.extreme-fast-belt")
 require("prototypes.items.ultra-express-belt")
 require("prototypes.items.extreme-express-belt")
 
--- Some inherited splitter and underground-belt definitions still contain the
--- internal namespace used by pre-release test builds. Factorio validates asset
--- paths while prototypes are registered, so data-final-fixes.lua is too late.
--- Normalize only that exact namespace and only while loading those definitions.
+-- The inherited splitter definitions still contain the internal namespace used
+-- by pre-release test builds. Factorio validates asset paths while prototypes
+-- are registered, so normalize that exact namespace while loading splitters.
 local old_namespace = "__UltimateBeltsSpaceAge__/"
 local new_namespace = "__UltimateBeltsSpaceAgePlus__/"
 local original_data_extend = data.extend
@@ -44,9 +43,11 @@ data.extend = function(self, prototypes)
 end
 
 require("prototypes.items.ultimate-splitters")
-require("prototypes.items.ultimate-underground-belts")
 
 data.extend = original_data_extend
+
+-- The underground-belt source uses the current namespace directly.
+require("prototypes.items.ultimate-underground-belts")
 
 require("prototypes.recipes.ultimate-belt-recipes")
 require("prototypes.recipes.ultimate-underground-belt-recipes")
