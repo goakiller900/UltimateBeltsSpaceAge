@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2026-07-11
+  Release Notes:
+    - First intended public release of Ultimate Belts Space Age Plus.
+    - The visible title was changed from Ultimate Belts Space Age to Ultimate Belts Space Age Plus.
+    - The internal Mod Portal identifier remains UltimateBeltsSpaceAge, so saves, dependencies and upgrade compatibility are unaffected.
+    - Version 0.0.2 is used because 0.0.1 was consumed during release setup and tagging but was not published as the public Mod Portal release.
+    - This keeps the release history honest and avoids reusing an already-created version identifier.
+  Changes:
+    - No gameplay, recipe, technology, entity or balance changes compared with the tested 0.0.1 build.
+    - Retains the Factorio 2.1, optional Space Age and optional Deadlock integration compatibility work described below.
+  Credits:
+    - UltimateBelts was originally created by Tyarns.
+    - Later maintenance and compatibility work was carried out by Jabor047 and other contributors.
+    - This Factorio 2.1 and Space Age continuation is maintained by goakiller900.
+  License:
+    - Distributed under the MIT License retained from the original project.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 2026-07-11
   Release Notes:
