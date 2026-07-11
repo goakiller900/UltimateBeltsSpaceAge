@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2026-07-11
+  Changes:
+    - Cleaned up the changelog so the early continuation release history is concise and accurate.
+    - Recorded that 0.0.3 was broken and superseded by the confirmed-working 0.0.4 release.
+    - No gameplay, graphics, recipes, technologies, entities, progression, balance or compatibility behaviour changed.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2026-07-11
   Fixes:
