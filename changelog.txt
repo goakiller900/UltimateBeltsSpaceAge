@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2026-07-12
+  Changes:
+    - Rebuilt all five underground-belt entrance and exit definitions as explicit north, east, south and west sprites for Factorio 2.1.
+    - Promoted the existing 106x85 high-resolution frames to primary sprites at scale 0.5 instead of relying on legacy hr_version nesting.
+    - Uses exact frame coordinates from the existing four-column, two-row underground-belt sprite sheets.
+    - Updated the underground-belt icon and entity paths to the current __UltimateBeltsSpaceAgePlus__/ namespace.
+    - Reduced the inherited underground-belt prototype file to a shared data-driven definition without changing belt speeds, reach, health, recipes or progression.
+  Validation:
+    - JSON metadata and Lua delimiter checks passed.
+    - In-game visual alignment still requires confirmation before this candidate is merged as a stable release.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2026-07-11
   Changes:
