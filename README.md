@@ -1,4 +1,4 @@
-# Ultimate Belts Space Age
+# Ultimate Belts Space Age Plus
 
 A community-maintained continuation of **Ultimate Belts** for Factorio 2.1.
 
@@ -41,7 +41,9 @@ This validates `info.json`, the changelog, required files and root Lua module re
 - Pushes to `master` create an immutable stable GitHub release for the version in `info.json`.
 - Factorio Mod Portal publishing is restricted to `master` and requires the `FACTORIO_API_KEY` repository secret.
 
-The Mod Portal identifier is `UltimateBeltsSpaceAge`; the visible mod title is **Ultimate Belts Space Age**.
+The unique Mod Portal identifier is `UltimateBeltsSpaceAgePlus`; the visible mod title is **Ultimate Belts Space Age Plus**.
+
+The earlier internal identifier `UltimateBeltsSpaceAge` was used only during repository release preparation and was not intended as the public Mod Portal identity. Factorio treats different internal names as different mods, so test builds using the earlier identifier should be removed before installing the public build.
 
 ## Maintenance status
 

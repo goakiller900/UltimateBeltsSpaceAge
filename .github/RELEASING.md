@@ -1,4 +1,4 @@
-# Releasing Ultimate Belts Space Age
+# Releasing Ultimate Belts Space Age Plus
 
 1. Update `info.json`.
 2. Add the matching version at the top of `changelog.txt`.
@@ -19,6 +19,6 @@
 
 ## Factorio Mod Portal
 
-The unique Mod Portal identifier is `UltimateBeltsSpaceAge` and the visible title is `Ultimate Belts Space Age`.
+The unique Mod Portal identifier is `UltimateBeltsSpaceAgePlus` and the visible title is `Ultimate Belts Space Age Plus`.
 
 To publish automatically, add a repository secret named `FACTORIO_API_KEY` containing an API key with `ModPortal: Upload Mods` permission. Portal publication is restricted to `master`; branch prereleases can never publish to the portal.
