@@ -1,14 +1,14 @@
 {
   "name": "UltimateBeltsSpaceAge",
-  "version": "1.4.0",
+  "version": "0.0.1",
   "title": "Ultimate Belts Space Age",
   "author": "Jabor047, goakiller900",
-  "contact": "",
+  "contact": "https://github.com/goakiller900/UltimateBeltsSpaceAge/issues",
   "homepage": "https://github.com/goakiller900/UltimateBeltsSpaceAge",
   "factorio_version": "2.1",
   "dependencies": [
     "base >= 2.1",
     "? space-age >= 2.1"
   ],
-  "description": "Adds five transport-belt tiers beyond express belts. The fastest tier runs at six times express-belt speed. Updated for Factorio 2.1 and Space Age; based on Tyarns' UltimateBelts mod."
+  "description": "Adds five transport-belt tiers beyond express belts, with matching underground belts and splitters. Updated for Factorio 2.1 and Space Age; based on Tyarns' UltimateBelts mod."
 }
