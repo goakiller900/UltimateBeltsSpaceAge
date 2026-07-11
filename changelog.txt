@@ -1,17 +1,21 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.4.0
+Version: 0.0.1
 Date: 2026-07-11
-  Changes:
-    - Updated mod metadata for Factorio 2.1.
-    - Added optional Space Age dependency ordering.
-    - Preserved the complete five-tier belt, underground-belt, and splitter progression.
+  Major Features:
+    - First public release of Ultimate Belts Space Age.
+    - Adds five transport-belt tiers beyond express belts, including matching underground belts and splitters.
+    - The fastest tier runs at six times express-belt speed.
   Compatibility:
+    - Updated for Factorio 2.1.
+    - Supports Space Age as an optional dependency.
+    - Preserves optional Deadlock stacking beltbox and compact loader integration when its API is available.
     - Removed obsolete mining hardness fields from entity prototypes.
     - Stopped overwriting the vanilla logistics-3 science-pack ingredients.
-    - Added support for both loader and loader-1x1 prototype types in Deadlock integration.
-    - Added nil checks around optional Deadlock beltbox and loader upgrade chains.
-  Known issues:
+    - Supports both loader and loader-1x1 prototypes in the optional Deadlock integration.
+    - Added defensive checks around optional beltbox and loader upgrade chains.
+  Known Issues:
     - Custom underground-belt entrance and exit graphics remain visibly misaligned in Factorio 2.1.
-      The entities are functional; help rebuilding the legacy artwork for the current structure format is welcome.
+      The entities still place, connect, transport items, rotate, mine and upgrade normally.
   Info:
-    - Updated project documentation and repository metadata.
+    - Community-maintained continuation based on Tyarns' UltimateBelts mod and later maintenance by Jabor047 and contributors.
+---------------------------------------------------------------------------------------------------
