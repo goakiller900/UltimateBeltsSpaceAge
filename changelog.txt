@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2026-07-11
+  Release Notes:
+    - Fixes a startup failure in the 0.0.3 test build after the internal mod identifier changed to UltimateBeltsSpaceAgePlus.
+    - Factorio previously stopped while loading inherited underground-belt and splitter icons that still referenced __UltimateBeltsSpaceAge__/.
+  Changes:
+    - Normalizes the exact pre-release asset namespace while this mod's inherited splitter and underground-belt prototypes are registered, before Factorio validates their icon and sprite paths.
+    - Removes the ineffective data-final-fixes namespace pass, which ran too late to prevent prototype registration failures.
+    - Restricts legacy mining-hardness cleanup to this mod's exact prototype names so similarly named prototypes from other mods are not modified.
+    - No gameplay, recipe, technology, entity, progression or balance changes.
+  Known Issues:
+    - The inherited custom underground-belt entrance and exit graphics remain visibly misaligned in Factorio 2.1.
+    - In-game loading and behaviour still require confirmation with the generated 0.0.4 test build.
+  Credits:
+    - UltimateBelts was originally created by Tyarns.
+    - Later maintenance and compatibility work was carried out by Jabor047 and other contributors.
+    - This Factorio 2.1 and Space Age continuation is maintained by goakiller900.
+  License:
+    - Distributed under the MIT License retained from the original project.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2026-07-11
   Release Notes:
