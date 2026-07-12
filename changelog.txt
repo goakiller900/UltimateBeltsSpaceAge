@@ -16,7 +16,7 @@ Date: 2026-07-12
     - Underground-belt graphics were confirmed in game for north, south, east and west orientations, including reversed entrance and exit directions.
     - Generated PNG integrity and source-dimension checks passed.
     - JSON metadata, required asset references, root Lua modules and Lua delimiter checks passed.
-    - Transport-belt and splitter graphics still require in-game confirmation before this candidate is merged as the stable 0.0.6 release.
+    - Transport belts, underground belts and splitters were confirmed working in game across all five tiers.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2026-07-11
