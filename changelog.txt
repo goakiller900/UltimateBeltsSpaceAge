@@ -5,51 +5,37 @@ Date: 2026-07-12
     - Replaced all five transport-belt, underground-belt and splitter item icons with modern Factorio 2.1-style artwork.
     - Added colour-matched green, red, purple, blue and cyan 64-pixel icon sheets with custom mip levels.
     - Updated item and entity icon metadata from 32 pixels to the current 64-pixel standard.
-    - Preserved the existing entity names, recipes, technologies, gameplay values and progression.
-  Validation:
-    - All 15 icon sheets were generated from the current express-tier icon layouts and retain their 120x64 mipmap-sheet dimensions.
-    - PNG integrity, transparency and prototype icon references were checked.
+  Notes:
+    - The new icons were created with AI assistance using Factorio's modern icon artwork as a visual reference, then reviewed and selected for this release.
+    - I am not a graphic designer, but I am very happy with how the final result fits Factorio's modern visual style.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2026-07-12
   Fixes:
-    - Rebuilt all five underground belts on Factorio 2.1's current express-underground-belt prototype and structure layout.
-    - Replaced the inherited legacy underground graphics with modern directional, side-loading, front-patch and back-patch artwork.
+    - Rebuilt all five underground belts using Factorio 2.1's current express-underground-belt structure layout.
     - Fixed north, south, east and west entrance and exit alignment in both directions.
   Changes:
-    - Rebuilt all five transport belts from the current Factorio 2.1 express transport-belt prototype and animation layout.
-    - Rebuilt all five splitters from the current Factorio 2.1 express splitter prototype and directional animation layout.
-    - Recoloured the modern belt, underground-belt, splitter and remnant artwork to the established green, red, purple, blue and cyan tier colours.
-    - Added modern colour-matched remnants for transport belts, underground belts and splitters.
-    - Removed the temporary asset-namespace loader patch and the unused legacy belt and splitter prototype definitions.
-    - Preserved entity names, recipes, speeds, underground reach, health, upgrade progression and optional Deadlock integration.
-  Validation:
-    - Underground-belt graphics were confirmed in game for north, south, east and west orientations, including reversed entrance and exit directions.
-    - Generated PNG integrity and source-dimension checks passed.
-    - JSON metadata, required asset references, root Lua modules and Lua delimiter checks passed.
-    - Transport belts, underground belts and splitters were confirmed working in game across all five tiers.
+    - Rebuilt all five transport belts and splitters using the current Factorio 2.1 prototype and animation layouts.
+    - Added modern colour-matched belt, underground-belt, splitter and remnant artwork for all five tiers.
+    - Removed unused legacy graphics and superseded prototype definitions.
+  Notes:
+    - The updated entity graphics were created with AI assistance using Factorio's modern artwork as a visual reference, then reviewed and tested in game.
+    - I am not a graphic designer, but I am very happy with the result.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2026-07-11
   Changes:
     - Cleaned up the changelog so the early continuation release history is concise and accurate.
     - Recorded that 0.0.3 was broken and superseded by the confirmed-working 0.0.4 release.
-    - No gameplay, graphics, recipes, technologies, entities, progression, balance or compatibility behaviour changed.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2026-07-11
   Fixes:
-    - Fixed a startup failure caused by inherited underground-belt and splitter assets still using the pre-release __UltimateBeltsSpaceAge__/ namespace.
-    - Normalized the exact legacy namespace before Factorio validates the affected prototypes.
-    - Removed the ineffective late namespace pass from data-final-fixes.lua.
-    - Restricted legacy mining-hardness cleanup to this mod's exact prototype names.
-  Validation:
-    - Confirmed working in Factorio 2.1 after the namespace fix.
+    - Fixed a startup failure caused by inherited splitter and underground-belt assets using the earlier internal mod identifier.
+    - Restricted compatibility cleanup to this mod's own prototypes.
   Known Issues:
-    - The inherited custom underground-belt entrance and exit graphics remain visibly misaligned in Factorio 2.1.
-    - The entities still place, connect, transport items, rotate, mine and upgrade normally.
-  Changes:
-    - No gameplay, recipe, technology, entity, progression or balance changes.
+    - The inherited underground-belt entrance and exit graphics remained visibly misaligned in Factorio 2.1.
+    - Superseded by the modern graphics introduced in 0.0.6.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2026-07-11
@@ -64,7 +50,6 @@ Version: 0.0.2
 Date: 2026-07-11
   Changes:
     - Changed the visible title to Ultimate Belts Space Age Plus while retaining the temporary internal identifier UltimateBeltsSpaceAge.
-    - No gameplay, recipe, technology, entity or balance changes.
   Notes:
     - Used during repository and release preparation and not intended as the final public identity.
 ---------------------------------------------------------------------------------------------------
@@ -76,21 +61,8 @@ Date: 2026-07-11
   Major Features:
     - Adds five transport-belt tiers beyond express belts, including matching underground belts and splitters.
     - The fastest tier runs at six times express-belt speed.
-    - Preserves the established recipes, progression, entity names and gameplay of the earlier UltimateBelts codebase as closely as practical.
   Compatibility:
     - Updated for Factorio 2.1.
     - Supports Space Age as an optional dependency.
-    - Preserves optional Deadlock's Stacking Beltboxes and Compact Loaders integration when its API is available.
-    - Removed obsolete mining-hardness fields from entity prototypes.
-    - Stopped overwriting the vanilla logistics-3 science-pack ingredients.
-    - Supports both loader and loader-1x1 prototypes in the optional Deadlock integration.
-    - Added defensive checks around optional beltbox and loader upgrade chains.
-  Credits:
-    - UltimateBelts was originally created by Tyarns.
-    - Later maintenance and compatibility work was carried out by Jabor047 and other contributors.
-    - This Factorio 2.1 and Space Age continuation is maintained by goakiller900.
-    - Thanks to Deadlock989 and the contributors and maintainers of Deadlock's Stacking Beltboxes and Compact Loaders for the optional integration API.
-    - Thanks to everyone who reported issues, tested builds, contributed fixes or preserved the project through earlier Factorio versions.
-  License:
-    - Distributed under the MIT License retained from the original project.
+    - Retains optional Deadlock's Stacking Beltboxes and Compact Loaders integration when its API is available.
 ---------------------------------------------------------------------------------------------------
