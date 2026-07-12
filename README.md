@@ -22,6 +22,8 @@ The mod adds five transport-belt tiers beyond express belts, including matching 
 
 Version 0.0.6 rebuilds the five custom transport belts, underground belts and splitters from Factorio 2.1's current express-tier prototype layouts. Modern belt animations, underground directional and side-loading structures, splitter animations, patches and remnants are recoloured for each custom tier while the established gameplay values remain unchanged.
 
+Version 0.0.7 also replaces the legacy 32-pixel item icons with modern 64-pixel Factorio-style icon sheets and embedded mip levels for all five tiers.
+
 ## Building a release
 
 ```bash
