@@ -122,7 +122,7 @@ for _, tier in ipairs(tiers) do
   item.name = tier.name
   item.icon = icon
   item.icons = nil
-  item.icon_size = 32
+  item.icon_size = 64
   item.subgroup = "belt"
   item.order = tier.order
   item.place_result = tier.name
@@ -133,7 +133,7 @@ for _, tier in ipairs(tiers) do
   entity.name = tier.name
   entity.icon = icon
   entity.icons = nil
-  entity.icon_size = 32
+  entity.icon_size = 64
   entity.minable = {mining_time = 0.3, result = tier.name}
   entity.max_health = tier.max_health
   entity.speed = tier.speed
