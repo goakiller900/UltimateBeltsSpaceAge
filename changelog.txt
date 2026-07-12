@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2026-07-12
+  Changes:
+    - Replaced all five transport-belt, underground-belt and splitter item icons with modern Factorio 2.1-style artwork.
+    - Added colour-matched green, red, purple, blue and cyan 64-pixel icon sheets with custom mip levels.
+    - Updated item and entity icon metadata from 32 pixels to the current 64-pixel standard.
+    - Preserved the existing entity names, recipes, technologies, gameplay values and progression.
+  Validation:
+    - All 15 icon sheets were generated from the current express-tier icon layouts and retain their 120x64 mipmap-sheet dimensions.
+    - PNG integrity, transparency and prototype icon references were checked.
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2026-07-12
   Fixes:
