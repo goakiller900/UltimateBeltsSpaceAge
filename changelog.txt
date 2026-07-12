@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2026-07-12
+  Fixes:
+    - Rebuilt all five underground belts on Factorio 2.1's current express-underground-belt prototype and structure layout.
+    - Replaced the inherited legacy underground graphics with modern directional, side-loading, front-patch and back-patch artwork.
+    - Fixed north, south, east and west entrance and exit alignment in both directions.
+  Changes:
+    - Rebuilt all five transport belts from the current Factorio 2.1 express transport-belt prototype and animation layout.
+    - Rebuilt all five splitters from the current Factorio 2.1 express splitter prototype and directional animation layout.
+    - Recoloured the modern belt, underground-belt, splitter and remnant artwork to the established green, red, purple, blue and cyan tier colours.
+    - Added modern colour-matched remnants for transport belts, underground belts and splitters.
+    - Removed the temporary asset-namespace loader patch and the unused legacy belt and splitter prototype definitions.
+    - Preserved entity names, recipes, speeds, underground reach, health, upgrade progression and optional Deadlock integration.
+  Validation:
+    - Underground-belt graphics were confirmed in game for north, south, east and west orientations, including reversed entrance and exit directions.
+    - Generated PNG integrity and source-dimension checks passed.
+    - JSON metadata, required asset references, root Lua modules and Lua delimiter checks passed.
+    - Transport-belt and splitter graphics still require in-game confirmation before this candidate is merged as the stable 0.0.6 release.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2026-07-11
   Changes:
