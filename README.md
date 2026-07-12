@@ -18,13 +18,9 @@ The mod adds five transport-belt tiers beyond express belts, including matching 
 4. Extreme Express — 5× express speed
 5. Ultimate — 6× express speed
 
-## Known issue / help wanted
+## Modern Factorio 2.1 graphics
 
-The custom underground-belt entrance and exit graphics use legacy artwork and are visibly misaligned in Factorio 2.1. The entities themselves still place, connect, transport items, rotate, mine and upgrade normally.
-
-Several Lua-only alignment and structure-layout fixes were tested without success and were reverted. A proper fix likely requires rebuilding the underground-belt structure artwork for Factorio 2.1, including current-size directional and side-loading sprites plus front and back patches.
-
-Contributions from someone experienced with Factorio entity graphics, GIMP/XCF source files or underground-belt sprite layouts are welcome.
+Version 0.0.6 rebuilds the five custom transport belts, underground belts and splitters from Factorio 2.1's current express-tier prototype layouts. Modern belt animations, underground directional and side-loading structures, splitter animations, patches and remnants are recoloured for each custom tier while the established gameplay values remain unchanged.
 
 ## Building a release
 
