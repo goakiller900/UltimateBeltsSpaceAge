@@ -10,7 +10,6 @@ Date: 2026-07-12
     - All 15 icon sheets were generated from the current express-tier icon layouts and retain their 120x64 mipmap-sheet dimensions.
     - PNG integrity, transparency and prototype icon references were checked.
 ---------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2026-07-12
   Fixes:
