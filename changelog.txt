@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 2026-07-13
+  Changes:
+    - Added locale support for English, German, French, Spanish, Brazilian Portuguese, Russian, Polish, Japanese, Korean, Simplified Chinese, Ukrainian and Dutch.
+    - Localized item, entity, technology, mod-name and mod-description text for all five belt tiers.
+    - Added localized names and technology descriptions for the optional Deadlock beltboxes and loaders.
+  Fixes:
+    - Corrected the Simplified Chinese entity name for the ultimate transport belt.
+  Notes:
+    - The new translations were prepared with AI assistance and can be refined further by native speakers.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2026-07-12
   Changes:
