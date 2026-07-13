@@ -24,6 +24,10 @@ Version 0.0.6 rebuilds the five custom transport belts, underground belts and sp
 
 Version 0.0.7 also replaces the legacy 32-pixel item icons with modern 64-pixel Factorio-style icon sheets and embedded mip levels for all five tiers.
 
+## Localisation
+
+Version 0.0.8 adds English, German, French, Spanish, Brazilian Portuguese, Russian, Polish, Japanese, Korean, Simplified Chinese, Ukrainian and Dutch locale files. These cover the belt tiers, underground belts, splitters, technologies, mod description and the optional Deadlock beltboxes and loaders.
+
 ## Building a release
 
 ```bash
